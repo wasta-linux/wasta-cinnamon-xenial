@@ -102,7 +102,7 @@ percentage-critical = 10
 sleep-inactive-battery-timeout = 1800
 
 [org.cinnamon.theme]
-name = 'Ambiance-Orange'
+name = 'Ambiance-Colors'
 
 [org.freedesktop.ibus.panel]
 custom-font = 'Ubuntu 11'
