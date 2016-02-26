@@ -1,0 +1,130 @@
+# z_11_wasta-cinnamon.gschema.override
+#
+#   If same key overridden in 2 files, "last wins" regarding filenames
+#       (so a "z_10_*" filename would win over a "10_*" filename)
+#       wasta-core uses "z_10_*" filenames, regional customizations
+#       use "z_20_*" filenames.
+#
+#   After modifying these .override files, reload with:
+#       glib-compile-schemas /usr/share/glib-2.0/schemas/
+#
+#   2016-02-21 rik: initial script (extracted from wasta-base-setup 14.04)
+#
+# ==============================================================================
+
+[org.cinnamon]
+alttab-switcher-style = 'icons+thumbnails'
+cinnamon-settings-advanced = false
+desktop-effects-close-effect = 'none'
+desktop-effects-map-effect = 'none'
+desktop-layout = 'traditional'
+enabled-applets = ['panel1:left:0:menu@cinnamon.org', 'panel1:left:1:show-desktop@cinnamon.org', 'panel1:left:2:panel-launchers@cinnamon.org', 'panel1:left:3:window-list@cinnamon.org', 'panel1:right:1:removable-drives@cinnamon.org', 'panel1:right:2:inhibit@cinnamon.org', 'panel1:right:3:bluetooth@cinnamon.org', 'panel1:right:4:network@cinnamon.org', 'panel1:right:5:sound@cinnamon.org', 'panel1:right:6:power@cinnamon.org', 'panel1:right:7:systray@cinnamon.org',  'panel1:right:8:calendar@simonwiles.net', 'panel1:right:9:windows-quick-list@cinnamon.org']
+favorite-apps = ['firefox.desktop', 'thunderbird.desktop', 'nemo.desktop', 'libreoffice-writer.desktop', 'vlc.desktop']
+overview-corner = ['false:false:false', 'false:false:false', 'false:false:false', 'false:false:false']
+panels-autohide = ['1:false']
+panels-enabled = ['1:0:bottom']
+panels-height = ['1:28']
+panel-edit-mode = false
+panels-resizable = ['1:false']
+panels-scale-text-icons = ['1:true']
+startup-animation = false
+
+[org.cinnamon.desktop.background]
+picture-uri = 'file:///usr/share/backgrounds/Tramonto_a_Scalea_by_Renatvs88.jpg'
+
+[org.cinnamon.desktop.interface]
+clock-show-date = true
+clock-use-24h = false
+cursor-theme = 'DMZ-White'
+font-name = 'Ubuntu 11'
+gtk-theme = 'Ambiance-Orange'
+icon-theme = 'ubuntu-mono-dark'
+
+[org.cinnamon.desktop.lockdown]
+disable-user-switching = true
+
+[org.cinnamon.desktop.media-handling]
+automount = true
+automount-open = false
+
+[org.cinnamon.desktop.screensaver]
+ask-for-away-message = false
+date-format = '%A, %B %e'
+font-date = 'Ubuntu 24'
+font-message = 'Ubuntu 14'
+font-time = 'Ubuntu 64'
+lock-enabled = false
+time-format = '%l:%M %p'
+
+[org.cinnamon.desktop.sound]
+event-sounds = false
+theme-name = 'freedesktop'
+volume-sound-enabled = true
+volume-sound-file = '/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga'
+
+[org.cinnamon.desktop.wm.preferences]
+theme = 'Ambiance-Orange'
+titlebar-font = 'Ubuntu Bold 11'
+
+[org.cinnamon.muffin]
+button-layout = ':minimize,maximize,close'
+edge-tiling = false
+
+[org.cinnamon.sounds]
+close-enabled = false
+login-enabled = false
+logout-enabled = false
+map-enabled = false
+maximize-enabled = false
+minimize-enabled = false
+plug-enabled = true
+plug-file = '/usr/share/sounds/freedesktop/stereo/device-added.oga'
+switch-enabled = false
+tile-enabled = false
+unmaximize-enabled = false
+unplug-enabled = true
+unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
+
+[org.cinnamon.settings-daemon.peripherals.touchpad]
+disable-while-typing = true
+scroll-method = 'two-finger-scrolling'
+tap-to-click = false
+
+[org.cinnamon.settings-daemon.plugins.media-keys]
+home = '<Primary><Alt>e'
+
+[org.cinnamon.settings-daemon.plugins.power]
+button-power = 'interactive'
+critical-battery-action = 'suspend'
+lock-on-suspend = false
+percentage-action = 5
+percentage-critical = 10
+sleep-inactive-battery-timeout = 1800
+
+[org.cinnamon.theme]
+name = 'Ambiance-Orange'
+
+[org.freedesktop.ibus.panel]
+custom-font = 'Ubuntu 11'
+xkb-icon-rgba = '#FFFFFF'
+use-custom-font = true
+
+[org.nemo.desktop]
+computer-icon-visible = false
+home-icon-visible = false
+network-icon-visible = false
+show-desktop-icons = true
+trash-icon-visible = false
+volumes-visible = true
+
+[org.nemo.preferences]
+date-format = 'iso'
+enable-delete = false
+ignore-view-metadata = true
+show-hidden-files = false
+show-location-entry = false
+
+[org.nemo.window-state]
+side-pane-view = 'places'
+start-with-sidebar = true
+start-with-status-bar = true

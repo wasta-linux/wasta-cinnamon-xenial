@@ -1,0 +1,13 @@
+Source: wasta-cinnamon-xenial
+Section: utils
+Priority: extra
+Maintainer: Rik Shaw <rikshaw76@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.5
+Homepage: https://github.com/wasta-linux/wasta-cinnamon-xenial
+
+Package: wasta-cinnamon-xenial
+Architecture: all
+Depends: ambiance-colors, arc-theme-3-18, cinnamon, ibus-kmfl, nemo, wasta-core-xenial, wasta-multidesktop-xenial, wasta-vertex, ${shlibs:Depends}, ${misc:Depends}
+Description: Wasta-Linux Cinnamon
+ Wasta-Linux 16.04 xenial Cinnamon Setup.

@@ -1,0 +1,23 @@
+[Nemo Action]
+#to debug: nemo -q  &&   NEMO_ACTION_VERBOSE=1 nemo
+Active=true
+Name=Make A4 PDF Booklet
+Comment=rearrange PDF pages for two pages per side A4 printing with center staple.
+#to support multiple files selected, cannot use quotes on the %F here.
+#to support spaces, in 14.04, use EscpaeSpaces=true
+#to support spaces, in 12.04 use Quote=double
+#if Quote=double causes a problem, document why here.
+Exec=/usr/share/nemo/actions/Make_A4_PDF_Booklet.sh %F
+Icon-Name=accessories-text-editor
+Selection=Any
+#EscapeSpaces: 14.04 command only.  replaces Quote.
+EscapeSpaces=true
+#Quote: 12.04 command only.  replaces EscapeSpaces.
+#Quote=double
+
+# What extensions to display on - this is an array, end with a semicolon
+# Use "dir" for directory selection and "none" for no extension
+# Use "any" by itself, semi-colon-terminated, for any file type
+# Extensions are NOT case sensitive.  jpg will match JPG, jPg, jpg, etc..
+# **** REQUIRED ****
+Extensions=PDF;
