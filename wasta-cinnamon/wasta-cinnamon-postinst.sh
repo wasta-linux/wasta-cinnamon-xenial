@@ -8,6 +8,7 @@
 #       is only intended to be run at package installation.
 #
 #   2016-02-21 rik: initial script
+#   2016-03-02 rik: modifying cinnamon version check
 #
 # ==============================================================================
 
@@ -73,13 +74,12 @@ echo
 sed -i -e 's@Remove this applet@@' \
     /usr/share/cinnamon/js/ui/applet.js
 
-CINNAMON_2_8=$(cinnamon --version | grep "2.8")
-
 # previous to 2.6, different sed needed
+CINNAMON_OLD=$(cinnamon --version | grep -e "2.0" -e "2.2" -e "2.4")
 
 # remove functionality: the ("wasta", "wasta") is a dummy variable so nothing
 #   is called
-if [ "$CINNAMON_2_8" ];
+if ! [ "$CINNAMON_OLD" ];
 then
     # 2.6+: new syntax
     sed -i -e 's@\(.*removeAppletFromPanel(\).*\()\;\)@\1"wasta", "wasta"\2@' \
