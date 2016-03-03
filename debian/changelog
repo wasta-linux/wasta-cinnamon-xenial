@@ -1,10 +1,3 @@
-wasta-cinnamon-xenial (0.9.0ubuntu1) UNRELEASED; urgency=medium
-
-  * 
-  * 
-
- -- Rik Shaw <rikshaw76@gmail.com>  Tue, 01 Mar 2016 15:55:49 +0300
-
 wasta-cinnamon-xenial (0.9.0) xenial; urgency=medium
 
   * gschema-override: added "refresh button" as nemo default
