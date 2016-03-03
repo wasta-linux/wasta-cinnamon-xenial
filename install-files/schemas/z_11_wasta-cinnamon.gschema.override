@@ -9,6 +9,7 @@
 #       glib-compile-schemas /usr/share/glib-2.0/schemas/
 #
 #   2016-02-21 rik: initial script (extracted from wasta-base-setup 14.04)
+#   2016-03-01 rik: added 'show refresh button' to nemo preferences
 #
 # ==============================================================================
 
@@ -91,7 +92,7 @@ scroll-method = 'two-finger-scrolling'
 tap-to-click = false
 
 [org.cinnamon.settings-daemon.plugins.media-keys]
-home = '<Primary><Alt>e'
+home = '<Super>e'
 
 [org.cinnamon.settings-daemon.plugins.power]
 button-power = 'interactive'
@@ -102,7 +103,7 @@ percentage-critical = 10
 sleep-inactive-battery-timeout = 1800
 
 [org.cinnamon.theme]
-name = 'Ambiance-Orange'
+name = 'Ambiance-Colors'
 
 [org.freedesktop.ibus.panel]
 custom-font = 'Ubuntu 11'
@@ -123,6 +124,7 @@ enable-delete = false
 ignore-view-metadata = true
 show-hidden-files = false
 show-location-entry = false
+show-reload-icon-toolbar = true
 
 [org.nemo.window-state]
 side-pane-view = 'places'
