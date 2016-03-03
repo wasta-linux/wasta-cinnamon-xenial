@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (0.9.2) xenial; urgency=medium
+
+  * debian/control: adding wasta-vertex, wasta-vertex-ubuntu as recommends
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Thu, 03 Mar 2016 15:29:46 +0300
+
 wasta-cinnamon-xenial (0.9.1) xenial; urgency=medium
 
   * postinst: modifying cinnamon version grep
