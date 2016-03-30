@@ -9,6 +9,7 @@
 #
 #   2016-02-21 rik: initial script
 #   2016-03-02 rik: modifying cinnamon version check
+#   2016-03-30 rik: reverting removal of panelEditMode from right-click
 #
 # ==============================================================================
 
@@ -122,13 +123,11 @@ echo
 sed -i -e '/^    .*addAction.*Restore all settings to default/ , /^    \}/ s/^/\/\/ wasta /' \
     /usr/share/cinnamon/js/ui/panel.js
 
-# Cinnamon panel: remove "Panel Edit mode" entry from right click
-#   If line begins with 4 spaces and contains "addMenuItem(panelEditMode, then
-#   add "// wasta " to beginning of line
-echo
-echo "*** Removing 'Panel Edit Mode' from Cinnamon panel right-click menu"
-echo
-sed -i -e '/^    .*addMenuItem(panelEditMode/ s/^/\/\/ wasta /' \
+# LEGACY: undo tweak that removed panelEditMode from the Cinnamon panel.
+#   If it isn't there and a user enables panelEditMode through cinnamon-settings
+#   but then closes cinnamon settings, all applets remain inactive and can't
+#   use the menu to get to cinnamon-settings to turn off panelEditMode!  Stuck!
+sed -i -e 's@^// wasta\(.*panelEditMode\)@/1@' \
     /usr/share/cinnamon/js/ui/panel.js
 
 # Menu Applet: Set "Menu Hover Delay" - NOTE: seems users have this replicated to

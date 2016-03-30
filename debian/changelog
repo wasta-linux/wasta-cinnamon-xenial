@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (0.9.3) xenial; urgency=medium
+
+  * gschema.override: moving to wasta-vertex, arc-darker as defaults
+  * postinst: reverting removal of panelEditMode from panel right-click
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 30 Mar 2016 14:17:31 +0300
+
 wasta-cinnamon-xenial (0.9.2) xenial; urgency=medium
 
   * debian/control: adding wasta-vertex, wasta-vertex-ubuntu as recommends
