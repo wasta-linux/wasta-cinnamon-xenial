@@ -1,3 +1,12 @@
+wasta-cinnamon-xenial (0.9.4) xenial; urgency=medium
+
+  * gschema.override: corrected arc-dark as cinnamon theme
+    - corrected arc-darker as wm theme
+    - nemo: right click now shows ALL options (eg. move to / copy to)
+    - icons: moved to wasta-vertex-ubuntu for more conservative choice
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Tue, 05 Apr 2016 09:12:42 +0300
+
 wasta-cinnamon-xenial (0.9.3) xenial; urgency=medium
 
   * gschema.override: moving to wasta-vertex, arc-darker as defaults

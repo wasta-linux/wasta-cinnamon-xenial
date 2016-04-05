@@ -12,6 +12,9 @@
 #   2016-03-01 rik: added 'show refresh button' to nemo preferences
 #   2016-03-30 rik: changing to Arc-Darker theme, wasta-vertex icons
 #       - added scale to enabled-applets
+#   2016-04-05 rik: corrected Arc-Darker theme for wm, Arc-Dark for cinnamon
+#       - changed icons to wasta-vertex-ubuntu (more conservative choice)
+#       - nemo: make all right-click options show
 #
 # ==============================================================================
 
@@ -41,7 +44,7 @@ clock-use-24h = false
 cursor-theme = 'DMZ-White'
 font-name = 'Ubuntu 11'
 gtk-theme = 'Arc-Darker'
-icon-theme = 'wasta-vertex'
+icon-theme = 'wasta-vertex-ubuntu'
 
 [org.cinnamon.desktop.lockdown]
 disable-user-switching = true
@@ -66,7 +69,7 @@ volume-sound-enabled = true
 volume-sound-file = '/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga'
 
 [org.cinnamon.desktop.wm.preferences]
-theme = 'Ambiance-Orange'
+theme = 'Arc-Darker'
 titlebar-font = 'Ubuntu Bold 11'
 
 [org.cinnamon.muffin]
@@ -105,7 +108,7 @@ percentage-critical = 10
 sleep-inactive-battery-timeout = 1800
 
 [org.cinnamon.theme]
-name = 'Ambiance-Colors'
+name = 'Arc-Dark'
 
 [org.freedesktop.ibus.panel]
 custom-font = 'Ubuntu 11'
@@ -121,6 +124,7 @@ trash-icon-visible = false
 volumes-visible = true
 
 [org.nemo.preferences]
+context-menus-show-all-actions = true
 date-format = 'iso'
 enable-delete = false
 ignore-view-metadata = true
