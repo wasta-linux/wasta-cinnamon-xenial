@@ -1,3 +1,13 @@
+wasta-cinnamon-xenial (1.0.0) xenial; urgency=medium
+
+  * debian/control: added ifstat, vnstat, vnstati as recommends (for cinnamon
+      network applets)
+  * install-files/applets: added ifstat@tagadan, vnstat@linuxmint.com
+  * install-files/schemas: nemo set to show thumbnails for local files up to
+      4GB in size (so audio and video thumbnails will show)
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 27 Apr 2016 11:25:27 +0300
+
 wasta-cinnamon-xenial (0.9.5) xenial; urgency=medium
 
   * lightdm.conf.d: set cinnamon as default session

@@ -15,6 +15,9 @@
 #   2016-04-05 rik: corrected Arc-Darker theme for wm, Arc-Dark for cinnamon
 #       - changed icons to wasta-vertex-ubuntu (more conservative choice)
 #       - nemo: make all right-click options show
+#   2016-04-27 rik: nemo: show thumbnails for files (prior limit was for files
+#       under 100k only, changed to 4GB (so picture, video previews would show).
+#       This is only for local files so I think even that large size OK.
 #
 # ==============================================================================
 
@@ -131,6 +134,7 @@ ignore-view-metadata = true
 show-hidden-files = false
 show-location-entry = false
 show-reload-icon-toolbar = true
+thumbnail-limit = uint64 4294967295
 
 [org.nemo.window-state]
 side-pane-view = 'places'
