@@ -10,6 +10,7 @@
 #   2016-02-21 rik: initial script
 #   2016-03-02 rik: modifying cinnamon version check
 #   2016-03-30 rik: reverting removal of panelEditMode from right-click
+#   2016-04-29 rik: cinnamon backgrounds cleanup
 #
 # ==============================================================================
 
@@ -50,7 +51,6 @@ then
     # set cinnamon logo to wasta-linux icon
     cp $DIR/resources/wl-round-22.png \
         /usr/share/unity-greeter/custom_cinnamon_badge.png
-
 fi
 
 # ------------------------------------------------------------------------------
@@ -160,6 +160,19 @@ sed -i -e '\@ibus-setup@d' \
 sed -i -e \
     'N;s@\(Keywords for filter.*\)\n\(.*system-config-printer\)@\1\n    [_("Keyboard Input Methods"),        "ibus-setup",                   "ibus-setup",         "hardware",       _("ibus, kmfl, keyman, keyboard, input, language")],\n\2@' \
     /usr/share/cinnamon/cinnamon-settings/cinnamon-settings.py
+
+# ------------------------------------------------------------------------------
+# cinnamon backgrounds cleanup
+# ------------------------------------------------------------------------------
+# Cinnammon Backgrounds Settings Panel groups by the last element of the
+#   xml config files, eg. adwaita.xml will show as "Adwaita".  Problem is
+#   all of the Ubuntu background xml files are named wily-wallpapers.xml,
+#   xenial-wallpapers.xml, etc.  That means they ALL have the name "wallpapers"
+#   in the Settings Panel.  Rename adding series name at end to make more clear.
+rename -v -f -e 's@([a-zA-Z]*)-wallpapers.xml@$1-wallpapers-$1.xml@' \
+    /usr/share/gnome-background-properties/*wallpapers.xml
+rename -v -f -e 's@([a-zA-Z]*)-backgrounds.xml@$1-backgrounds-$1.xml@' \
+    /usr/share/gnome-background-properties/*backgrounds.xml
 
 # ------------------------------------------------------------------------------
 # ibus fixes
