@@ -36,6 +36,7 @@ panels-height = ['1:28']
 panel-edit-mode = false
 panels-resizable = ['1:false']
 panels-scale-text-icons = ['1:true']
+show-snap-osd = false
 startup-animation = false
 
 [org.cinnamon.desktop.background]
@@ -63,7 +64,7 @@ font-date = 'Ubuntu 24'
 font-message = 'Ubuntu 14'
 font-time = 'Ubuntu 64'
 lock-enabled = false
-time-format = '%l:%M %p'
+time-format = '  %a %b %e, %l:%M %p'
 
 [org.cinnamon.desktop.sound]
 event-sounds = false
@@ -77,7 +78,7 @@ titlebar-font = 'Ubuntu Bold 11'
 
 [org.cinnamon.muffin]
 button-layout = ':minimize,maximize,close'
-edge-tiling = false
+edge-tiling = true
 
 [org.cinnamon.sounds]
 close-enabled = false

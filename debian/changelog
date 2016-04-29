@@ -1,3 +1,14 @@
+wasta-cinnamon-xenial (1.0.1) xenial; urgency=medium
+
+  * debian/control: moved arc-theme-3-18, etc., to "recommends" so won't get
+      uninstalled if an arc conflict with other packages arises
+    - gschema-override: enable edge tiling
+    - applets: adding "window list with app grouping" applet (inactive)
+    - cinnamon backgrounds: renaming ubuntu wallpaper collection xml files
+      so will show the series name in cinnamon background settings.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Fri, 29 Apr 2016 20:03:07 +0300
+
 wasta-cinnamon-xenial (1.0.0) xenial; urgency=medium
 
   * debian/control: added ifstat, vnstat, vnstati as recommends (for cinnamon
