@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.2) xenial; urgency=medium
+
+  * debian/control: adding nemo-sendto-clamtk, nemo-compare to recommends
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 02 May 2016 15:49:54 +0300
+
 wasta-cinnamon-xenial (1.0.1) xenial; urgency=medium
 
   * debian/control: moved arc-theme-3-18, etc., to "recommends" so won't get
