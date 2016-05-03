@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.3) xenial; urgency=medium
+
+  * debian/control: correcting dependency to muffin not mutter
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Tue, 03 May 2016 17:23:25 +0300
+
 wasta-cinnamon-xenial (1.0.2) xenial; urgency=medium
 
   * debian/control: adding nemo-sendto-clamtk, nemo-compare to recommends
