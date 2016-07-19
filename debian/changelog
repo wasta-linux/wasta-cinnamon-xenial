@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.0.4) xenial; urgency=medium
+
+  * gschema.override: Cinnamon 3.0 updates
+    - ibus update
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Tue, 19 Jul 2016 13:58:27 -0500
+
 wasta-cinnamon-xenial (1.0.3) xenial; urgency=medium
 
   * debian/control: correcting dependency to muffin not mutter
