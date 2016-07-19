@@ -66,6 +66,11 @@ font-time = 'Ubuntu 64'
 lock-enabled = false
 time-format = '  %a %b %e, %l:%M %p'
 
+[org.cinnamon.desktop.session]
+settings-daemon-uses-logind = true
+session-manager-uses-logind = true
+screensaver-uses-logind = false
+
 [org.cinnamon.desktop.sound]
 event-sounds = false
 theme-name = 'freedesktop'
@@ -113,6 +118,9 @@ sleep-inactive-battery-timeout = 1800
 
 [org.cinnamon.theme]
 name = 'Arc-Dark'
+
+[org.freedesktop.ibus.general]
+use-system-keyboard-layout = false
 
 [org.freedesktop.ibus.panel]
 custom-font = 'Ubuntu 11'
