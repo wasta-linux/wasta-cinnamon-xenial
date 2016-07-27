@@ -9,6 +9,6 @@ Homepage: https://github.com/wasta-linux/wasta-cinnamon-xenial
 Package: wasta-cinnamon-xenial
 Architecture: all
 Depends: cinnamon, muffin, nemo, wasta-core-xenial, wasta-multidesktop-xenial, ${shlibs:Depends}, ${misc:Depends}
-Recommends: ambiance-colors, arc-theme-3-18, ibus-kmfl, ifstat, kmfl-keyboard-ipa, nemo-compare, nemo-image-converter, nemo-preview, nemo-sendto-clamtk, vnstat, vnstati, wasta-vertex, wasta-vertex-ubuntu
+Recommends: ambiance-colors, arc-theme-3-18, blueberry, ibus-kmfl, ifstat, kmfl-keyboard-ipa, nemo-compare, nemo-image-converter, nemo-preview, nemo-sendto-clamtk, vnstat, vnstati, wasta-vertex, wasta-vertex-ubuntu
 Description: Wasta-Linux Cinnamon
  Wasta-Linux 16.04 Xenial Cinnamon Setup.

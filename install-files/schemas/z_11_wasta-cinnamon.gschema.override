@@ -18,6 +18,8 @@
 #   2016-04-27 rik: nemo: show thumbnails for files (prior limit was for files
 #       under 100k only, changed to 4GB (so picture, video previews would show).
 #       This is only for local files so I think even that large size OK.
+#   2016-07-27 rik: touchpad updates for cinnamon 3.0
+#       - nemo: sidebar-width update to 165
 #
 # ==============================================================================
 
@@ -102,8 +104,9 @@ unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
 
 [org.cinnamon.settings-daemon.peripherals.touchpad]
 disable-while-typing = true
-scroll-method = 'two-finger-scrolling'
-tap-to-click = false
+natural-scroll = false
+tap-to-click = true
+vertical-two-finger-scrolling = true
 
 [org.cinnamon.settings-daemon.plugins.media-keys]
 home = '<Super>e'
@@ -146,6 +149,7 @@ show-reload-icon-toolbar = true
 thumbnail-limit = uint64 4294967295
 
 [org.nemo.window-state]
+sidebar-width = 165
 side-pane-view = 'places'
 start-with-sidebar = true
 start-with-status-bar = true

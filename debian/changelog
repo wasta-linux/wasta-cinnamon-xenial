@@ -1,3 +1,11 @@
+wasta-cinnamon-xenial (1.0.5) xenial; urgency=medium
+
+  * postinst: add cinnamon-background-properties symlink if doesn't exist
+  * gschema.override: update touchpad settings for cinnamon 3.0
+  * debian/control: add blueberry as recommends
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 27 Jul 2016 12:18:10 -0500
+
 wasta-cinnamon-xenial (1.0.4) xenial; urgency=medium
 
   * gschema.override: Cinnamon 3.0 updates
