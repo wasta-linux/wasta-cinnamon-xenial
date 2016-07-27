@@ -11,6 +11,7 @@
 #   2016-03-02 rik: modifying cinnamon version check
 #   2016-03-30 rik: reverting removal of panelEditMode from right-click
 #   2016-04-29 rik: cinnamon backgrounds cleanup
+#   2016-07-27 rik: cinnamon-backgrounds-settings: symlink if doesn't exist
 #
 # ==============================================================================
 
@@ -173,6 +174,14 @@ rename -v -f -e 's@([a-zA-Z]*)-wallpapers.xml@$1-wallpapers-$1.xml@' \
     /usr/share/gnome-background-properties/*wallpapers.xml
 rename -v -f -e 's@([a-zA-Z]*)-backgrounds.xml@$1-backgrounds-$1.xml@' \
     /usr/share/gnome-background-properties/*backgrounds.xml
+
+# cinnamon 3.0 won't look at gnome-background-properties so
+#   symlinking if not found
+if ! [ -e /usr/share/cinnamon-background-properties ];
+then
+    ln -s /usr/share/gnome-background-properties \
+        /usr/share/cinnamon-background-properties
+fi
 
 # ------------------------------------------------------------------------------
 # ibus fixes
