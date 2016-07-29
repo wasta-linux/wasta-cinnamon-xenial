@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.6) xenial; urgency=medium
+
+  * debian/control: adding wasta-ibus-xkb as a 'recommends'
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Fri, 29 Jul 2016 12:34:51 -0500
+
 wasta-cinnamon-xenial (1.0.5) xenial; urgency=medium
 
   * postinst: add cinnamon-background-properties symlink if doesn't exist
