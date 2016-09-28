@@ -12,6 +12,8 @@
 #   2016-03-30 rik: reverting removal of panelEditMode from right-click
 #   2016-04-29 rik: cinnamon backgrounds cleanup
 #   2016-07-27 rik: cinnamon-backgrounds-settings: symlink if doesn't exist
+#   2016-09-28 rik: adding nemo permissions to evince (so can 'open containing
+#       folder')
 #
 # ==============================================================================
 
@@ -188,6 +190,16 @@ fi
 # ------------------------------------------------------------------------------
 # set as system-wide default input method:
 im-config -n ibus
+
+# ------------------------------------------------------------------------------
+# Allow nemo as a helper for evince
+# ------------------------------------------------------------------------------
+
+# delete 'wasta' lines (will re-create below)
+sed -i -e '\@wasta@d' /etc/apparmor.d/usr.bin.evince
+
+sed -i -e 's@\(/usr/bin/nautilus Cx -> sanitized_helper.*\)@\1\n  /usr/bin/nemo Cx -> sanitized_helper,     # wasta: Cinnamon/Nemo@' \
+    /etc/apparmor.d/usr.bin.evince
 
 # ------------------------------------------------------------------------------
 # Dconf / Gsettings Default Value adjustments

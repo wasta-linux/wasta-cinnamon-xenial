@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.0.7) xenial; urgency=medium
+
+  * postinst: adding nemo to evince permissions (to allow 'open containing
+    folder')
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 28 Sep 2016 08:02:36 +0300
+
 wasta-cinnamon-xenial (1.0.6) xenial; urgency=medium
 
   * debian/control: adding wasta-ibus-xkb as a 'recommends'
