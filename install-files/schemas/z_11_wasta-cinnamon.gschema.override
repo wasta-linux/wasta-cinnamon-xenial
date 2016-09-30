@@ -20,6 +20,7 @@
 #       This is only for local files so I think even that large size OK.
 #   2016-07-27 rik: touchpad updates for cinnamon 3.0
 #       - nemo: sidebar-width update to 165
+#   2016-09-30 rik: menus-have-icons, buttons-have-icons set to true
 #
 # ==============================================================================
 
@@ -118,6 +119,10 @@ lock-on-suspend = false
 percentage-action = 5
 percentage-critical = 10
 sleep-inactive-battery-timeout = 1800
+
+[org.cinnamon.settings-daemon.plugins.xsettings]
+buttons-have-icons = true
+menus-have-icons = true
 
 [org.cinnamon.theme]
 name = 'Arc-Dark'

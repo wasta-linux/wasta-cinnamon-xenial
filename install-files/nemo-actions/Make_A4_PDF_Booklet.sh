@@ -1,7 +1,6 @@
 #!/bin/bash
 while (( $# )); do
     OUT="${1%.*}_bklt.pdf"
-    cp "$1" "$OUT" && chmod u+w "$OUT" && pdfbklt -p 2 -b A4 "$OUT"
-
+    bookletimposer --no-gui --booklet --pages-per-sheet=2x1 --format=A4 --output="$OUT" "$1"
   shift
 done
