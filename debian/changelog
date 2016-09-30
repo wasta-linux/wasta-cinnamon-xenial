@@ -1,15 +1,12 @@
-wasta-cinnamon-xenial (1.0.8ubuntu1) UNRELEASED; urgency=medium
-
-  * 
-
- -- Rik Shaw <rikshaw76@gmail.com>  Fri, 30 Sep 2016 16:04:15 +0300
-
 wasta-cinnamon-xenial (1.0.8) xenial; urgency=medium
 
   * gschema-override: menus-have-icons, buttons-have-icons set to 'true'
+    - power: use-time-for-policy set to 'false' (dconf says may fix an
+      ACPI BIOS issue for some hardware?)
   * nemo-actions: Make A4 PDF updated to use bookletimposer
   * debian/control: bookletimposer, wasta-papirus added as 'recommends'
     - nemo-preview removed (confusing for some)
+    - added all netusagemonitor dependencies as 'recommends'
 
  -- Rik Shaw <rikshaw76@gmail.com>  Fri, 30 Sep 2016 16:02:04 +0300
 
