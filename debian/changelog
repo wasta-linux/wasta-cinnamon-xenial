@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.9) xenial; urgency=medium
+
+  * gschema.override: enable indicators, disable gtk-overlay-scrollbars
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Sat, 01 Oct 2016 16:11:08 +0300
+
 wasta-cinnamon-xenial (1.0.8) xenial; urgency=medium
 
   * gschema-override: menus-have-icons, buttons-have-icons set to 'true'
