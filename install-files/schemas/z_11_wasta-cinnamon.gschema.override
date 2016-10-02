@@ -25,6 +25,9 @@
 #         dconf indicates may fix some ACPI BIOS issues?
 #   2016-10-01 rik: cinnamon: enable indicators
 #       - turn off 'gtk-overlay-scrollbars'
+#   2016-10-02 rik: enumerating enabled-applets to see if allows wasta-reset
+#       to be more efficent (sometimes applets were not enabling or there would
+#       be a long delay in wasta-reset finishing... it would 'hang up')
 #
 # ==============================================================================
 
@@ -35,7 +38,7 @@ desktop-effects-close-effect = 'none'
 desktop-effects-map-effect = 'none'
 desktop-layout = 'traditional'
 enable-indicators = true
-enabled-applets = ['panel1:left:0:menu@cinnamon.org', 'panel1:left:1:show-desktop@cinnamon.org', 'panel1:left:2:panel-launchers@cinnamon.org', 'panel1:left:3:scale@cinnamon.org:13', 'panel1:left:4:window-list@cinnamon.org', 'panel1:right:0:notifications@cinnamon.org', 'panel1:right:1:removable-drives@cinnamon.org', 'panel1:right:2:inhibit@cinnamon.org', 'panel1:right:3:systray@cinnamon.org', 'panel1:right:4:bluetooth@cinnamon.org', 'panel1:right:5:network@cinnamon.org', 'panel1:right:6:sound@cinnamon.org', 'panel1:right:7:power@cinnamon.org', 'panel1:right:8:calendar@simonwiles.net', 'panel1:right:9:windows-quick-list@cinnamon.org']
+enabled-applets = ['panel1:left:0:menu@cinnamon.org:1', 'panel1:left:1:show-desktop@cinnamon.org:2', 'panel1:left:2:panel-launchers@cinnamon.org:3', 'panel1:left:3:scale@cinnamon.org:4', 'panel1:left:4:window-list@cinnamon.org:5', 'panel1:right:0:notifications@cinnamon.org:6', 'panel1:right:1:removable-drives@cinnamon.org:7', 'panel1:right:2:inhibit@cinnamon.org:8', 'panel1:right:3:systray@cinnamon.org:9', 'panel1:right:4:bluetooth@cinnamon.org:10', 'panel1:right:5:network@cinnamon.org:11', 'panel1:right:6:sound@cinnamon.org:12', 'panel1:right:7:power@cinnamon.org:13', 'panel1:right:8:calendar@simonwiles.net:14', 'panel1:right:9:windows-quick-list@cinnamon.org:15']
 favorite-apps = ['firefox.desktop', 'thunderbird.desktop', 'nemo.desktop', 'libreoffice-writer.desktop', 'vlc.desktop']
 overview-corner = ['false:false:false', 'false:false:false', 'false:false:false', 'false:false:false']
 panels-autohide = ['1:false']

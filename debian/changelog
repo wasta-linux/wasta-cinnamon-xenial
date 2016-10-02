@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.10) xenial; urgency=medium
+
+  * gschema.override: enumerating enabled-applets for more reliability
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Sun, 02 Oct 2016 11:51:26 +0300
+
 wasta-cinnamon-xenial (1.0.9) xenial; urgency=medium
 
   * gschema.override: enable indicators, disable gtk-overlay-scrollbars
