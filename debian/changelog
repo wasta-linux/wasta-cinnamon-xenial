@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (1.0.11) xenial; urgency=medium
+
+  * gschema-override: not showing icons for buttons (since inconsistent)
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 05 Oct 2016 09:16:27 +0300
+
 wasta-cinnamon-xenial (1.0.10) xenial; urgency=medium
 
   * gschema.override: enumerating enabled-applets for more reliability
