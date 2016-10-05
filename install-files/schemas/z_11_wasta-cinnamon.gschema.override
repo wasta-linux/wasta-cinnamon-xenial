@@ -28,6 +28,9 @@
 #   2016-10-02 rik: enumerating enabled-applets to see if allows wasta-reset
 #       to be more efficent (sometimes applets were not enabling or there would
 #       be a long delay in wasta-reset finishing... it would 'hang up')
+#   2016-10-05 rik: changing buttons-have-icons back to false: use of icons
+#       isn't consistent with buttons: shutdown menu for example only
+#       shows an icon for "cancel", so looks unprofessional
 #
 # ==============================================================================
 
@@ -131,7 +134,7 @@ sleep-inactive-battery-timeout = 1800
 use-time-for-policy = false
 
 [org.cinnamon.settings-daemon.plugins.xsettings]
-buttons-have-icons = true
+buttons-have-icons = false
 menus-have-icons = true
 
 [org.cinnamon.theme]
