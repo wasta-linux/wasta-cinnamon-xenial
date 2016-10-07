@@ -14,6 +14,7 @@
 #   2016-07-27 rik: cinnamon-backgrounds-settings: symlink if doesn't exist
 #   2016-09-28 rik: adding nemo permissions to evince (so can 'open containing
 #       folder')
+#   2016-10-07 rik: notifications applet: set to show empty tray by default
 #
 # ==============================================================================
 
@@ -151,6 +152,16 @@ echo
 
 sed -i -e 's@\(\"default\"\:\) \[.*@\1 \[\"firefox\.desktop\", \"thunderbird\.desktop\", \"nemo\.desktop\", \"libreoffice-writer\.desktop\", \"vlc\.desktop\"\]@' \
     /usr/share/cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json
+
+# Notifications Applet: Set "show empty tray" to true
+echo
+echo "*** Notifications Applet: showing empty tray by default"
+echo
+# this will make all settings 'true' by default, but too hard to match only
+# the desired setting: no problem as with Cinnamon 3.0 there are only 2
+# settings in this file, and the other is already 'true' by default.
+sed -i -e 's@\("default".*\)false@\1true@g' \
+    /usr/share/cinnamon/applets/notifications@cinnamon.org/settings-schema.json
 
 # ------------------------------------------------------------------------------
 # cinnamon-settings fixes
