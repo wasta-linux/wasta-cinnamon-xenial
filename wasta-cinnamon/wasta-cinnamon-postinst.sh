@@ -15,6 +15,8 @@
 #   2016-09-28 rik: adding nemo permissions to evince (so can 'open containing
 #       folder')
 #   2016-10-07 rik: notifications applet: set to show empty tray by default
+#   2016-10-31 rik: adding gtk scrollbar fix (so will scroll 'one page at a
+#       time')
 #
 # ==============================================================================
 
@@ -211,6 +213,20 @@ sed -i -e '\@wasta@d' /etc/apparmor.d/usr.bin.evince
 
 sed -i -e 's@\(/usr/bin/nautilus Cx -> sanitized_helper.*\)@\1\n  /usr/bin/nemo Cx -> sanitized_helper,     # wasta: Cinnamon/Nemo@' \
     /etc/apparmor.d/usr.bin.evince
+
+# ------------------------------------------------------------------------------
+# Fix scrollbars to go "one page at a time" with click
+# ------------------------------------------------------------------------------
+# global gtk-3.0 setting location:
+sed -i -e '$a gtk-primary-button-warps-slider = false' \
+    -i -e '\#gtk-primary-button-warps-slider#d' \
+    /etc/gtk-3.0/settings.ini
+
+# "per theme" adjustments:
+sed -i -e 's@\(gtk-primary-button-warps-slider\).*@\1 = false@' \
+    /usr/share/themes/Arc/gtk-2.0/gtkrc \
+    /usr/share/themes/Arc-Dark/gtk-2.0/gtkrc \
+    /usr/share/themes/Arc-Darker/gtk-2.0/gtkrc
 
 # ------------------------------------------------------------------------------
 # Dconf / Gsettings Default Value adjustments
