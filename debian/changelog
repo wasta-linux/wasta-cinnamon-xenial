@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.0.13) xenial; urgency=medium
+
+  * postinst: scrollbar changes (will now scroll "one page at a time" when
+    clicking)
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 31 Oct 2016 10:39:11 +0300
+
 wasta-cinnamon-xenial (1.0.12) xenial; urgency=medium
 
   * postinst: notifications applet: "show empty tray" default set to 'true'
