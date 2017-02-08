@@ -1,0 +1,11 @@
+[Nemo Action]
+#to debug: nemo -q  &&   NEMO_ACTION_VERBOSE=1 nemo
+#16.04: confirmed works with multiple files WITH spaces in names
+Active=true
+Name=Send by Email
+Comment=Attach selected file(s) to a new email using the default email client
+Exec=xdg-email --attach "%F"
+Icon-Name=mail-attachment
+Selection=NotNone
+Extensions=nodirs;
+Separator=" --attach "

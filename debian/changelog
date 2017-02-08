@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.0.14) xenial; urgency=medium
+
+  * nemo-actions: add send-by-email.nemo_action
+    - update other actions to use "Selection=notnone"
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 08 Feb 2017 16:21:12 +0300
+
 wasta-cinnamon-xenial (1.0.13) xenial; urgency=medium
 
   * postinst: scrollbar changes (will now scroll "one page at a time" when

@@ -31,12 +31,14 @@
 #   2016-10-05 rik: changing buttons-have-icons back to false: use of icons
 #       isn't consistent with buttons: shutdown menu for example only
 #       shows an icon for "cancel", so looks unprofessional
+#   2017-01-04 rik: desktop-effects false for performance and stability gains
 #
 # ==============================================================================
 
 [org.cinnamon]
 alttab-switcher-style = 'icons+thumbnails'
 cinnamon-settings-advanced = false
+desktop-effects = false
 desktop-effects-close-effect = 'none'
 desktop-effects-map-effect = 'none'
 desktop-layout = 'traditional'
