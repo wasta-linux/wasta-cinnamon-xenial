@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=wasta [Redmond]
-Comment=Toggle between Redmond (MS) Defaults and Wasta-Linux Defaults
-Exec=wasta-redmond
-Terminal=false
-Type=Application
-Icon=wasta-linux
-Categories=Application;System;
