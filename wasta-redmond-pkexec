@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# ==============================================================================
+# wasta-redmond-pkexec
+#
+# moves around gschema.override files and then recompiles schemas
+#
+#   2015-11-15 rik: initial script
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Check to ensure running as root
+# ------------------------------------------------------------------------------
+#   No fancy "double click" here because normal user should never need to run
+if [ $(id -u) -ne 0 ]
+then
+	echo
+	echo "You must run this script with sudo." >&2
+	echo "Exiting...."
+	sleep 5s
+	exit 1
+fi
+
+# ------------------------------------------------------------------------------
+# Initial Setup
+# ------------------------------------------------------------------------------
+
+# Setup Directory for later reference
+DIR=/usr/share/wasta-redmond
+
+# ------------------------------------------------------------------------------
+# Main Processing
+# ------------------------------------------------------------------------------
+
+if [ -e /usr/share/glib-2.0/schemas/z_11_wasta-redmond.gschema.override ];
+then
+    # --------------------------------------------------------------------------
+    # REDMOND Active, remove symlinks to wasta-redmond schemas
+    # --------------------------------------------------------------------------
+    rm /usr/share/glib-2.0/schemas/z_11_wasta-redmond.gschema.override
+    
+    rm /usr/share/gnome-shell/extensions/gnomenu@panacier.gmail.com/schemas/z_11_wasta-redmond.gschema.override
+else
+    echo enabling....
+    # --------------------------------------------------------------------------
+    # REDMOND NOT active, symlink to wasta-redmond schemas
+    # --------------------------------------------------------------------------
+    ln -s $DIR/resources/z_11_wasta-redmond.gschema.override \
+        /usr/share/glib-2.0/schemas/z_11_wasta-redmond.gschema.override
+    
+    ln -s $DIR/resources/z_11_wasta-gnomenu.gschema.override \
+        /usr/share/gnome-shell/extensions/gnomenu@panacier.gmail.com/schemas/z_11_wasta-redmond.gschema.override
+fi
+
+# --------------------------------------------------------------------------
+# Compile schemas affected by wasta-redmond
+# --------------------------------------------------------------------------
+# gnomenu schemas
+glib-compile-schemas \
+    /usr/share/gnome-shell/extensions/gnomenu@panacier.gmail.com/schemas/
+
+# MAIN System schemas: Sending any "error" to null (if and key not found)
+glib-compile-schemas /usr/share/glib-2.0/schemas/ &> /dev/null || true;
+
+exit 0

@@ -15,9 +15,12 @@ EscapeSpaces=true
 #Quote: 12.04 command only.  replaces EscapeSpaces.
 #Quote=double
 
+# Make sure doesn't show on Nemo right-click with no document selected
+Selection=NotNone
+
 # What extensions to display on - this is an array, end with a semicolon
 # Use "dir" for directory selection and "none" for no extension
 # Use "any" by itself, semi-colon-terminated, for any file type
 # Extensions are NOT case sensitive.  jpg will match JPG, jPg, jpg, etc..
 # **** REQUIRED ****
-Extensions=PDF;
+Extensions=PDF;nodirs;

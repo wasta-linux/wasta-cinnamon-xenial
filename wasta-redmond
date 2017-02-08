@@ -1,0 +1,123 @@
+#!/bin/bash
+
+# ==============================================================================
+# wasta-redmond
+#
+# This script can be run at any time to "toggle" default settings from
+#   standard Wasta-Linux to "Wasta-Redmond" defaults
+#
+#   2015-11-14 rik: initial script
+#   2015-11-16 rik: resetting gnomenu: if user has disabled hotcorner in gnomenu
+#       then taskbar will crash, so need to ensure both of those extensions
+#       reset to ensure compatibility.
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Ensure script running as regular user
+# ------------------------------------------------------------------------------
+if [ $(id -u) -eq 0 ]
+then
+    echo "This script should NOT be run with SUDO!  Must be regular user!!"
+    echo "Exiting...."
+    sleep 5s
+    exit 1
+fi
+
+# ------------------------------------------------------------------------------
+# Initial Setup
+# ------------------------------------------------------------------------------
+
+# if 'auto' parameter passed, run non-interactively
+if [ "$1" == "auto" ];
+then
+    AUTO="auto"
+else
+    AUTO=""
+fi
+
+if ! [ "$AUTO" ];
+then
+    # prompt user
+    zenity --question --no-wrap --height=200 --width=450 \
+        --title="wasta [Redmond]" \
+        --window-icon=/usr/share/icons/hicolor/64x64/apps/wasta-linux.png \
+        --text="This utility <i><b>TOGGLES</b></i> your Desktop Settings between
+<u>standard Wasta-Linux settings</u> and <u>Wasta-Redmond
+settings</u>, which look similar to Windows 7
+<b><i>Do you want to TOGGLE your Desktop Settings?</i></b>"
+
+    if [ "$?" -ne 0 ];
+    then
+        # User didn't say yes: exit
+        exit 0
+    fi
+else
+    echo
+    echo " *** Script Entry: wasta-redmond (auto mode)"
+    echo
+fi
+
+# ------------------------------------------------------------------------------
+# Main Processing
+# ------------------------------------------------------------------------------
+
+# sudo commands done using pkexec so get option for user to change
+pkexec /usr/bin/wasta-redmond-pkexec
+RETURN=$?
+if [ $RETURN -ne 0 ];
+then
+    MSG="Authorization failed: Default settings <b>NOT TOGGLED</b>\n\n"
+else
+    MSG="Default settings <b>TOGGLED</b>\n\n"
+fi
+
+echo
+echo " *** restarting GNOME ***"
+echo
+sleep 1s
+
+MSG+="Restarting Gnome-Shell to Apply Changes\n\n"
+
+# reset the essential gsettings elements
+gsettings reset org.gnome.shell enabled-extensions
+sleep 1s
+
+# ensure TaskBar and gnomenu reset, because wrong settings crash gnome-shell
+gsettings reset-recursively org.gnome.shell.extensions.gnomenu
+gsettings reset-recursively org.gnome.shell.extensions.TaskBar
+sleep 1s
+
+# replace gnome-shell (need trailing & so script goes on, else just waiting)
+#killall -3 gnome-shell &
+
+nohup gnome-shell --replace &> /dev/null &
+
+# give a few seconds for GNOME to finish restarting
+sleep 3s
+
+echo
+echo " *** GNOME restarted ***"
+echo
+
+MSG+="Gnome-Shell Restarted Successfully\n\n"
+MSG+="<b>Please reboot your computer if you have any trouble</b>\n\n"
+
+# ------------------------------------------------------------------------------
+# Finished
+# ------------------------------------------------------------------------------
+
+if ! [ "$AUTO" ];
+then
+    # prompt user
+    zenity --info --title "wasta [Redmond]: Finished" --no-wrap --height=150 --width=450 \
+        --window-icon=/usr/share/icons/hicolor/64x64/apps/wasta-linux.png \
+        --text="$MSG"
+else
+    echo
+    echo " *** Script Exit: wasta-redmond (auto mode)"
+    echo
+fi
+
+exit 0
+

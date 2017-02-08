@@ -1,0 +1,21 @@
+# ==============================================================================
+# z_11_wasta-gnomenu.gshema.override
+#
+#   If same key overridden in 2 files, "last wins" regarding filenames
+#       (so a "z_10_*" filename would win over a "10_*" filename)
+#       We'll set wasta-base-setup to use "z_10_*" filenames, regional customizations
+#       can go with "z_20_*" filenames.  Reason need "z" instead of just going
+#       with numbers is because MINT already has a "linuxmint-artwork.gschema.override"
+#       file that totally thwarts the number scheme!
+#
+#   After modifying these .override files, reload with:
+#       glib-compile-schemas /usr/share/glib-2.0/schemas/
+#
+# ==============================================================================
+
+# NOT disabling hotcorner: if disabled here, then taskbar crashes
+[org.gnome.shell.extensions.gnomenu]
+disable-activities-hotcorner = false
+hide-panel-view = true
+hide-shortcuts = false
+shortcuts-display = 'Favorites'
