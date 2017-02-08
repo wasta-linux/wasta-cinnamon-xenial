@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.0.15) xenial; urgency=medium
+
+  * nemo-actions: removed "nodirs" since was then selecting ALL file
+    extensions.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 08 Feb 2017 20:19:39 +0300
+
 wasta-cinnamon-xenial (1.0.14) xenial; urgency=medium
 
   * nemo-actions: add send-by-email.nemo_action
