@@ -23,4 +23,4 @@ Selection=NotNone
 # Use "any" by itself, semi-colon-terminated, for any file type
 # Extensions are NOT case sensitive.  jpg will match JPG, jPg, jpg, etc..
 # **** REQUIRED ****
-Extensions=PDF;nodirs;
+Extensions=PDF;
