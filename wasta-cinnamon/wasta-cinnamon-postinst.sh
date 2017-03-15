@@ -17,6 +17,8 @@
 #   2016-10-07 rik: notifications applet: set to show empty tray by default
 #   2016-10-31 rik: adding gtk scrollbar fix (so will scroll 'one page at a
 #       time')
+#   2017-03-15 rik: cleaning up cinnamon json sed selections (to match only
+#       within the specified block of code)
 #
 # ==============================================================================
 
@@ -137,14 +139,21 @@ sed -i -e 's@^// wasta\(.*panelEditMode\)@/1@' \
     /usr/share/cinnamon/js/ui/panel.js
 
 # Menu Applet: Set "Menu Hover Delay" - NOTE: seems users have this replicated to
-#   ~/.cinnamon/configs/menu@cinnamon.org/menu@cinnamon.org.json (this is created when cinnamon is
+#   ~/.cinnamon/configs/menu@cinnamon.org/1.json (this is created when cinnamon is
 #   started if it doesn't exist).  So, have to loop through there too, setting
 #   default AND value.
+# sed -i -e \
+#    '\|"hover-delay" *:|,\|}|    s|\("value" *:\).*|\1 200|' ~/.cinnamon/configs/menu@cinnamon.org/1.json
 echo
 echo "*** Setting Main Menu Hover Delay"
 echo
 
-sed -i -e 's@\(\"default\" \:\) 0@\1 200@' \
+sed -i -e \
+    '\|"hover-delay" *:|,\|}|    s|\("default" *:\).*|\1 200,|' \
+    /usr/share/cinnamon/applets/menu@cinnamon.org/settings-schema.json
+
+sed -i -e \
+    '\|"show-category-icons" *:|,\|}|    s|\("default" *:\).*|\1 false,|' \
     /usr/share/cinnamon/applets/menu@cinnamon.org/settings-schema.json
 
 # Panel-Launchers Applet: Set default apps

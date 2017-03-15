@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.1.0) xenial; urgency=medium
+
+  * postinst: cleanup of sed matches for .json files (thanks jcl!)
+  * postinst: menu@cinnamon.org turn off category icons by default
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 15 Mar 2017 20:41:50 +0300
+
 wasta-cinnamon-xenial (1.0.15) xenial; urgency=medium
 
   * nemo-actions: removed "nodirs" since was then selecting ALL file
