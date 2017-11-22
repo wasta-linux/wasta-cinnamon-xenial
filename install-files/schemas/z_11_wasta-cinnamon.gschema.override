@@ -32,6 +32,10 @@
 #       isn't consistent with buttons: shutdown menu for example only
 #       shows an icon for "cancel", so looks unprofessional
 #   2017-01-04 rik: desktop-effects false for performance and stability gains
+#   2017-11-22 rik: updating for Cinnamon 3.6 keys: note that warnings will
+#       show upon compile for 3.0 users when referencing the 3.6 keys, and
+#       vice versa for 3.6 users when referencing the 3.0 keys.  But compile
+#       of schemas should not be affected.
 #
 # ==============================================================================
 

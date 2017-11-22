@@ -19,6 +19,7 @@
 #       time')
 #   2017-03-15 rik: cleaning up cinnamon json sed selections (to match only
 #       within the specified block of code)
+#   2017-11-22 rik: cleaning up "send by email" nemo action logic
 #
 # ==============================================================================
 
@@ -236,6 +237,21 @@ sed -i -e 's@\(gtk-primary-button-warps-slider\).*@\1 = false@' \
     /usr/share/themes/Arc/gtk-2.0/gtkrc \
     /usr/share/themes/Arc-Dark/gtk-2.0/gtkrc \
     /usr/share/themes/Arc-Darker/gtk-2.0/gtkrc
+
+# ------------------------------------------------------------------------------
+# "Send by Email" patch
+# ------------------------------------------------------------------------------
+# Not sure which cinnamon package provides this functionality... was not there
+# originally with Cinnamon 2.8/3.0 but is now there in 3.6
+if ! [ -e /usr/share/nemo/actions/send-by-mail.nemo_action ];
+then
+    echo
+    echo "*** Adding 'Send by Email' Nemo action"
+    echo
+
+    cp $DIR/resources/wasta-send-by-email.nemo_action \
+        /usr/share/nemo/actions
+fi
 
 # ------------------------------------------------------------------------------
 # Dconf / Gsettings Default Value adjustments

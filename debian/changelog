@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.1.1) xenial; urgency=medium
+
+  * install-files: adding wasta-cinnamon-upgrade command so users can upgrade
+    to newer cinnamon version using Wasta Cinnamon 3.6 PPA
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 22 Nov 2017 12:09:11 +0300
+
 wasta-cinnamon-xenial (1.1.0) xenial; urgency=medium
 
   * postinst: cleanup of sed matches for .json files (thanks jcl!)
