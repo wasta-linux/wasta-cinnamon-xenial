@@ -20,6 +20,8 @@
 #   2017-03-15 rik: cleaning up cinnamon json sed selections (to match only
 #       within the specified block of code)
 #   2017-11-22 rik: cleaning up "send by email" nemo action logic
+#       - wallpapers name fix: adding 0-9 to matching so that system76 is
+#       is matched, for example.
 #
 # ==============================================================================
 
@@ -195,9 +197,9 @@ sed -i -e \
 #   all of the Ubuntu background xml files are named wily-wallpapers.xml,
 #   xenial-wallpapers.xml, etc.  That means they ALL have the name "wallpapers"
 #   in the Settings Panel.  Rename adding series name at end to make more clear.
-rename -v -f -e 's@([a-zA-Z]*)-wallpapers.xml@$1-wallpapers-$1.xml@' \
+rename -v -f -e 's@([a-zA-Z0-9]*)-wallpapers.xml@$1-wallpapers-$1.xml@' \
     /usr/share/gnome-background-properties/*wallpapers.xml
-rename -v -f -e 's@([a-zA-Z]*)-backgrounds.xml@$1-backgrounds-$1.xml@' \
+rename -v -f -e 's@([a-zA-Z0-9]*)-backgrounds.xml@$1-backgrounds-$1.xml@' \
     /usr/share/gnome-background-properties/*backgrounds.xml
 
 # cinnamon 3.0 won't look at gnome-background-properties so
