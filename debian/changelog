@@ -1,3 +1,11 @@
+wasta-cinnamon-xenial (1.1.2) xenial; urgency=medium
+
+  * version bump to ensure most recent commit not causing conflict for
+    launchpad since github website now "verifies" commit and breaks
+    launchpad import.  Will need to commit via terminal from now on.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 22 Nov 2017 14:00:13 +0300
+
 wasta-cinnamon-xenial (1.1.1) xenial; urgency=medium
 
   * install-files: adding wasta-cinnamon-upgrade command so users can upgrade
