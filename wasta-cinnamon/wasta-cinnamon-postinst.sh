@@ -22,6 +22,7 @@
 #   2017-11-22 rik: cleaning up "send by email" nemo action logic
 #       - wallpapers name fix: adding 0-9 to matching so that system76 is
 #       is matched, for example.
+#   2018-01-08 rik: modifying date format for calendar@cinnamon.org
 #
 # ==============================================================================
 
@@ -166,6 +167,22 @@ echo
 
 sed -i -e 's@\(\"default\"\:\) \[.*@\1 \[\"firefox\.desktop\", \"thunderbird\.desktop\", \"nemo\.desktop\", \"libreoffice-writer\.desktop\", \"vlc\.desktop\"\]@' \
     /usr/share/cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json
+
+# Clock: Set date format
+echo
+echo "*** Setting date format"
+echo
+# calendar applet updates
+JSON_FILE=/usr/share/cinnamon/applets/calendar@cinnamon.org/settings-schema.json
+# hide favorite / shutdown options
+# use custom menu icon
+# remove label
+echo "*** Updating JSON_FILE: $JSON_FILE"
+#jq can't do "sed -i" inplace update, so need to re-create file, then
+# update ownership (in case run as root)
+NEW_FILE=$(jq '.["use-custom-format"].default=true | .["custom-format"].default="%l:%M %p"' \
+    < $JSON_FILE)
+echo "$NEW_FILE" > $JSON_FILE
 
 # Notifications Applet: Set "show empty tray" to true
 echo
