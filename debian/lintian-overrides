@@ -1,1 +1,2 @@
+wasta-cinnamon-xenial: binary-without-manpage
 wasta-cinnamon-xenial: python-script-but-no-python-dep
