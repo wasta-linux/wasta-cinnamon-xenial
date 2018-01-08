@@ -36,6 +36,8 @@
 #       show upon compile for 3.0 users when referencing the 3.6 keys, and
 #       vice versa for 3.6 users when referencing the 3.0 keys.  But compile
 #       of schemas should not be affected.
+#   2018-01-08 rik: removing calendar@simonwiles.net since that now comes from
+#       wasta-cinnamon-layout-*
 #
 # ==============================================================================
 
@@ -47,7 +49,7 @@ desktop-effects-close-effect = 'none'
 desktop-effects-map-effect = 'none'
 desktop-layout = 'traditional'
 enable-indicators = true
-enabled-applets = ['panel1:left:0:menu@cinnamon.org:1', 'panel1:left:1:show-desktop@cinnamon.org:2', 'panel1:left:2:panel-launchers@cinnamon.org:3', 'panel1:left:3:scale@cinnamon.org:4', 'panel1:left:4:window-list@cinnamon.org:5', 'panel1:right:0:notifications@cinnamon.org:6', 'panel1:right:1:removable-drives@cinnamon.org:7', 'panel1:right:2:inhibit@cinnamon.org:8', 'panel1:right:3:systray@cinnamon.org:9', 'panel1:right:4:bluetooth@cinnamon.org:10', 'panel1:right:5:network@cinnamon.org:11', 'panel1:right:6:sound@cinnamon.org:12', 'panel1:right:7:power@cinnamon.org:13', 'panel1:right:8:calendar@simonwiles.net:14', 'panel1:right:9:windows-quick-list@cinnamon.org:15']
+enabled-applets = ['panel1:left:0:menu@cinnamon.org:1', 'panel1:left:1:show-desktop@cinnamon.org:2', 'panel1:left:2:panel-launchers@cinnamon.org:3', 'panel1:left:3:scale@cinnamon.org:4', 'panel1:left:4:window-list@cinnamon.org:5', 'panel1:right:0:notifications@cinnamon.org:6', 'panel1:right:1:removable-drives@cinnamon.org:7', 'panel1:right:2:inhibit@cinnamon.org:8', 'panel1:right:3:systray@cinnamon.org:9', 'panel1:right:4:bluetooth@cinnamon.org:10', 'panel1:right:5:network@cinnamon.org:11', 'panel1:right:6:sound@cinnamon.org:12', 'panel1:right:7:power@cinnamon.org:13', 'panel1:right:8:calendar@cinnamon.org:14', 'panel1:right:9:windows-quick-list@cinnamon.org:15']
 favorite-apps = ['firefox.desktop', 'thunderbird.desktop', 'nemo.desktop', 'libreoffice-writer.desktop', 'vlc.desktop']
 overview-corner = ['false:false:false', 'false:false:false', 'false:false:false', 'false:false:false']
 panels-autohide = ['1:false']
