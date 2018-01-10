@@ -6,6 +6,10 @@
 #
 #   2017-11-22 rik: Initial script
 #   2018-01-08 rik: adding wasta-cinnamon-layout-3-6 install
+#   2018-01-10 rik: removing wasta-cinnamon-layout-3-6 - conflict between
+#       where calendar@simonwiles.net comes from makes it too tricky to
+#       allow wasta-layout for xenial.... so users will just have to go to
+#       bionic before they can get wasta-layout
 #
 # ==============================================================================
 
@@ -154,32 +158,6 @@ echo
 
 apt-get $YES dist-upgrade
 LASTERRORLEVEL=$?
-if [ "$LASTERRORLEVEL" -ne "0" ];
-then
-    if [ "$AUTO" ];
-    then
-        echo
-        echo "*** ERROR: apt-get command failed. You may want to re-run!"
-        echo
-    else
-        echo
-        echo "     --------------------------------------------------------"
-        echo "     'APT' Error During Update / Installation"
-        echo "     --------------------------------------------------------"
-        echo
-        echo "     An error was encountered with the last 'apt' command."
-        echo "     You should close this script and re-start it, or"
-        echo "     correct the error manually before proceeding."
-        echo
-        read -p "     Press any key to proceed..."
-        echo
-    fi
-fi
-
-# ------------------------------------------------------------------------------
-# Add wasta-cinnamon-layout package
-# ------------------------------------------------------------------------------
-apt-get $YES install wasta-cinnamon-layout-3-6
 if [ "$LASTERRORLEVEL" -ne "0" ];
 then
     if [ "$AUTO" ];
