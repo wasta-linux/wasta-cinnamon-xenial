@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (2.0.0) xenial; urgency=medium
+
+  * wasta-layout branch: a fork of wasta-cinnamon-xenial to give
+    wasta-layout compatibility for xenial users
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 15 Jan 2018 12:02:27 +0300
+
 wasta-cinnamon-xenial (1.1.5) xenial; urgency=medium
 
   * applets: re-adding calendar@simonwiles.net: problem to remove

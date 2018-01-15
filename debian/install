@@ -1,4 +1,3 @@
-install-files/applets                      usr/share/cinnamon
 install-files/bin                          usr
 install-files/lightdm.conf.d               etc/lightdm
 install-files/nemo-actions/*               usr/share/nemo/actions
