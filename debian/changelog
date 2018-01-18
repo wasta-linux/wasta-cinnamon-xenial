@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (2.0.1) xenial; urgency=medium
+
+  * gschema.override: set enabled-applets numbers to match wasta-layout
+    - remove keys not in cinnamon 3.6
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Thu, 18 Jan 2018 11:46:21 +0300
+
 wasta-cinnamon-xenial (2.0.0) xenial; urgency=medium
 
   * wasta-layout branch: a fork of wasta-cinnamon-xenial to give

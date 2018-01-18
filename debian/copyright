@@ -1,9 +1,9 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: wasta-core-wily
+Upstream-Name: wasta-cinnamon-xenial
 Source: https://github.com/wasta-linux/wasta-cinnamon-xenial
 
-Files: debian
-Copyright: 2015 Rik Shaw <rikshaw76@gmail.com>
+Files: *
+Copyright: 2015-2018 Rik Shaw <rikshaw76@gmail.com>
 License: GPL-3.0+
 
 License: GPL-3.0+

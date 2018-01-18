@@ -3,12 +3,12 @@ Section: utils
 Priority: extra
 Maintainer: Rik Shaw <rikshaw76@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: https://github.com/wasta-linux/wasta-cinnamon-xenial
 
 Package: wasta-cinnamon-xenial
 Architecture: all
 Depends: cinnamon, muffin, nemo, wasta-core-xenial, wasta-multidesktop-xenial, ${shlibs:Depends}, ${misc:Depends}
-Recommends: ambiance-colors, arc-theme-3-18, blueberry, bookletimposer, gir1.2-gtop-2.0, ibus-kmfl, ifstat, jq, kmfl-keyboard-ipa, libsox-fmt-mp3, nemo-compare, nemo-image-converter, nemo-sendto-clamtk, sox, vnstat, vnstati, wasta-ibus-xkb, wasta-layout, wasta-papirus, wasta-vertex, wasta-vertex-ubuntu
+Recommends: ambiance-colors, arc-theme-3-18, blueberry, bookletimposer, gir1.2-gtop-2.0, ibus-kmfl, ifstat, jq, kmfl-keyboard-ipa, libsox-fmt-mp3, nemo-compare, nemo-image-converter, nemo-sendto-clamtk, sox, vnstat, vnstati, wasta-ibus-xkb, wasta-cinnamon-layout-3-6, wasta-vertex, wasta-vertex-ubuntu
 Description: Wasta-Linux Cinnamon
  Wasta-Linux 16.04 Xenial Cinnamon Setup.
