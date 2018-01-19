@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (2.0.2) xenial; urgency=medium
+
+  * gschema-override: remove scale from enabled-applets
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Fri, 19 Jan 2018 10:30:39 +0300
+
 wasta-cinnamon-xenial (2.0.1) xenial; urgency=medium
 
   * gschema.override: set enabled-applets numbers to match wasta-layout
