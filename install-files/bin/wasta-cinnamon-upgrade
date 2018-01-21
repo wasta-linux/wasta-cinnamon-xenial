@@ -10,6 +10,10 @@
 #       where calendar@simonwiles.net comes from makes it too tricky to
 #       allow wasta-layout for xenial.... so users will just have to go to
 #       bionic before they can get wasta-layout
+#   2018-01-21 rik: using a wasta-layout branch for wasta-cinnamon-xenial
+#       makes it possible for xenial users to install wasta-cinnamon-layout-3-6.
+#       Making sure wasta-cinnamon-xenial from the cinnamon-3-6 ppa is installed
+#       before doing the dist-upgrade to avoid the conflict.
 #
 # ==============================================================================
 
@@ -46,10 +50,6 @@ read -p "Press <Enter> to continue..."
 # ------------------------------------------------------------------------------
 # Initial Setup
 # ------------------------------------------------------------------------------
-
-DIR=/usr/share/wasta-cinnamon
-
-SERIES=$(lsb_release -sc)
 
 # if 'auto' parameter passed, run non-interactively
 if [ "$1" == "auto" ];
@@ -155,6 +155,11 @@ fi
 echo
 echo "*** Upgrading all installed software"
 echo
+
+#FIRST install wasta-cinnamon-xenial since it needs to be upgraded first or
+#   else wasta-cinnamon-layout-3-6 will error due to multiple packages
+#   providing the calendar@simonwiles.net applet.
+apt-get $YES install wasta-cinnamon-xenial
 
 apt-get $YES dist-upgrade
 LASTERRORLEVEL=$?
