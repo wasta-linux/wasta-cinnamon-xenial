@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (2.0.3) xenial; urgency=medium
+
+  * wasta-cinnamon-upgrade: update wasta-cinnamon-xenial before dist-upgrade
+    to make sure file conflicts not encountered.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Sun, 21 Jan 2018 17:08:02 +0300
+
 wasta-cinnamon-xenial (2.0.2) xenial; urgency=medium
 
   * gschema-override: remove scale from enabled-applets
