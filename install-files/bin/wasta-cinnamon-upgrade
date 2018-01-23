@@ -14,6 +14,7 @@
 #       makes it possible for xenial users to install wasta-cinnamon-layout-3-6.
 #       Making sure wasta-cinnamon-xenial from the cinnamon-3-6 ppa is installed
 #       before doing the dist-upgrade to avoid the conflict.
+#   2018-01-23 rik: re-add $SERIES variable
 #
 # ==============================================================================
 
@@ -50,6 +51,8 @@ read -p "Press <Enter> to continue..."
 # ------------------------------------------------------------------------------
 # Initial Setup
 # ------------------------------------------------------------------------------
+
+SERIES=$(lsb_release -sc)
 
 # if 'auto' parameter passed, run non-interactively
 if [ "$1" == "auto" ];

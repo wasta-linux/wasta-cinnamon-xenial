@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (2.0.4) xenial; urgency=medium
+
+  * wasta-cinnamon-upgrade: re-add $SERIES variable
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Tue, 23 Jan 2018 16:23:15 +0300
+
 wasta-cinnamon-xenial (2.0.3) xenial; urgency=medium
 
   * wasta-cinnamon-upgrade: update wasta-cinnamon-xenial before dist-upgrade
