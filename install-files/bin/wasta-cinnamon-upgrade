@@ -164,6 +164,8 @@ echo
 #   providing the calendar@simonwiles.net applet.
 apt-get $YES install wasta-cinnamon-xenial
 
+apt-get $YES install wasta-cinnamon-layout-3-6
+
 apt-get $YES dist-upgrade
 LASTERRORLEVEL=$?
 if [ "$LASTERRORLEVEL" -ne "0" ];

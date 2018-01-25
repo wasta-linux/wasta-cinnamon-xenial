@@ -1,3 +1,15 @@
+wasta-cinnamon-xenial (2.0.5) xenial; urgency=medium
+
+  * debian/control: removing wasta-cinnamon-layout-3-6 recommends since
+    that will get wasta-cinnamon-layout-3-6 installed before
+    wasta-cinnamon-xenial updates and will get the conflict from the
+    calendar@simonwiles.net appearing in 2 packages.
+  
+  * wasta-cinnamon-upgrade: manually installing wasta-cinnamon-layout-3-6
+    since now not coming in from the recommends.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Thu, 25 Jan 2018 12:15:34 +0300
+
 wasta-cinnamon-xenial (2.0.4) xenial; urgency=medium
 
   * wasta-cinnamon-upgrade: re-add $SERIES variable
