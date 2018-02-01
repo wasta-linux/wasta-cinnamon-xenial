@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (2.0.6) xenial; urgency=medium
+
+  * postinst: removing sed panel-launchers hack: now done in wasta-core-xenial
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Thu, 01 Feb 2018 09:06:11 +0300
+
 wasta-cinnamon-xenial (2.0.5) xenial; urgency=medium
 
   * debian/control: removing wasta-cinnamon-layout-3-6 recommends since
