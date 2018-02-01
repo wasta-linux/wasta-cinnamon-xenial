@@ -1,3 +1,10 @@
+wasta-cinnamon-xenial (1.1.9) xenial; urgency=medium
+
+  * postinst: removing sedd that hacked panel-launchers: we now do these
+    tweaks using jq in wasta-core-xenial
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Thu, 01 Feb 2018 09:03:14 +0300
+
 wasta-cinnamon-xenial (1.1.8) xenial; urgency=medium
 
   * wasta-cinnamon-upgrade: manually installing wasta-cinnamon-layout-3-6

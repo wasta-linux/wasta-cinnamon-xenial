@@ -23,6 +23,8 @@
 #       - wallpapers name fix: adding 0-9 to matching so that system76 is
 #       is matched, for example.
 #   2018-01-08 rik: modifying date format for calendar@cinnamon.org
+#   2018-02-01 rik: removing panel-launchers sed tweak: we now use jq in
+#       wasta-core-xenial
 #
 # ==============================================================================
 
@@ -142,32 +144,6 @@ sed -i -e '/^    .*addAction.*Restore all settings to default/ , /^    \}/ s/^/\
 sed -i -e 's@^// wasta\(.*panelEditMode\)@/1@' \
     /usr/share/cinnamon/js/ui/panel.js
 
-# Menu Applet: Set "Menu Hover Delay" - NOTE: seems users have this replicated to
-#   ~/.cinnamon/configs/menu@cinnamon.org/1.json (this is created when cinnamon is
-#   started if it doesn't exist).  So, have to loop through there too, setting
-#   default AND value.
-# sed -i -e \
-#    '\|"hover-delay" *:|,\|}|    s|\("value" *:\).*|\1 200|' ~/.cinnamon/configs/menu@cinnamon.org/1.json
-echo
-echo "*** Setting Main Menu Hover Delay"
-echo
-
-sed -i -e \
-    '\|"hover-delay" *:|,\|}|    s|\("default" *:\).*|\1 200,|' \
-    /usr/share/cinnamon/applets/menu@cinnamon.org/settings-schema.json
-
-sed -i -e \
-    '\|"show-category-icons" *:|,\|}|    s|\("default" *:\).*|\1 false,|' \
-    /usr/share/cinnamon/applets/menu@cinnamon.org/settings-schema.json
-
-# Panel-Launchers Applet: Set default apps
-echo
-echo "*** Setting Default Panel Launchers"
-echo
-
-sed -i -e 's@\(\"default\"\:\) \[.*@\1 \[\"firefox\.desktop\", \"thunderbird\.desktop\", \"nemo\.desktop\", \"libreoffice-writer\.desktop\", \"vlc\.desktop\"\]@' \
-    /usr/share/cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json
-
 # Clock: Set date format
 echo
 echo "*** Setting date format"
@@ -183,16 +159,6 @@ echo "*** Updating JSON_FILE: $JSON_FILE"
 NEW_FILE=$(jq '.["use-custom-format"].default=true | .["custom-format"].default="%l:%M %p"' \
     < $JSON_FILE)
 echo "$NEW_FILE" > $JSON_FILE
-
-# Notifications Applet: Set "show empty tray" to true
-echo
-echo "*** Notifications Applet: showing empty tray by default"
-echo
-# this will make all settings 'true' by default, but too hard to match only
-# the desired setting: no problem as with Cinnamon 3.0 there are only 2
-# settings in this file, and the other is already 'true' by default.
-sed -i -e 's@\("default".*\)false@\1true@g' \
-    /usr/share/cinnamon/applets/notifications@cinnamon.org/settings-schema.json
 
 # ------------------------------------------------------------------------------
 # cinnamon-settings fixes
