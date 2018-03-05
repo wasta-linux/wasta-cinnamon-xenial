@@ -41,6 +41,8 @@
 #   2018-01-19 rik: updating enabled-applets numbers to match wasta-layout
 #       - remove keys not found in cinnamon 3.6
 #       - remove scale from enabled-applets
+#   2018-03-05 rik: set ibus trigger to <Control>space since cinnamon swallows
+#       first <Super> hit.
 #
 # ==============================================================================
 
@@ -151,6 +153,9 @@ name = 'Arc-Dark'
 
 [org.freedesktop.ibus.general]
 use-system-keyboard-layout = false
+
+[org.freedesktop.ibus.general.hotkey]
+triggers = ['<Control>space']
 
 [org.freedesktop.ibus.panel]
 custom-font = 'Ubuntu 11'
