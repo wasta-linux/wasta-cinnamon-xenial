@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (2.0.8) xenial; urgency=medium
+
+  * gschema.override: removing notifications applet
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 05 Mar 2018 18:13:35 +0300
+
 wasta-cinnamon-xenial (2.0.7) xenial; urgency=medium
 
   * gschema.override: set ibus trigger to <Control>space since cinnamon
