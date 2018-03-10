@@ -44,6 +44,8 @@
 #   2018-03-05 rik: set ibus trigger to <Control>space since cinnamon swallows
 #       first <Super> hit.
 #   2018-03-05 rik: removing notifications as a default applet
+#   2018-03-10 rik: removing thunderbird and vlc from "favorites" so that
+#       vertical size of cinnamon menu is reduced (good for vms, etc.)
 #
 # ==============================================================================
 
@@ -56,7 +58,7 @@ desktop-effects-map-effect = 'none'
 desktop-layout = 'traditional'
 enable-indicators = true
 enabled-applets = ['panel1:left:0:menu@cinnamon.org:101', 'panel1:left:1:show-desktop@cinnamon.org:102', 'panel1:left:2:panel-launchers@cinnamon.org:103', 'panel1:left:3:window-list@cinnamon.org:105', 'panel1:right:1:removable-drives@cinnamon.org:106', 'panel1:right:2:inhibit@cinnamon.org:107', 'panel1:right:3:systray@cinnamon.org:108', 'panel1:right:4:bluetooth@cinnamon.org:109', 'panel1:right:5:network@cinnamon.org:110', 'panel1:right:6:sound@cinnamon.org:111', 'panel1:right:7:power@cinnamon.org:112', 'panel1:right:8:calendar@cinnamon.org:118', 'panel1:right:9:windows-quick-list@cinnamon.org:114']
-favorite-apps = ['firefox.desktop', 'thunderbird.desktop', 'nemo.desktop', 'libreoffice-writer.desktop', 'vlc.desktop']
+favorite-apps = ['firefox.desktop', 'nemo.desktop', 'libreoffice-writer.desktop']
 overview-corner = ['false:false:false', 'false:false:false', 'false:false:false', 'false:false:false']
 panels-autohide = ['1:false']
 panels-enabled = ['1:0:bottom']
