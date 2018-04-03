@@ -1,3 +1,9 @@
+wasta-cinnamon-xenial (2.1.0) xenial; urgency=medium
+
+  * gschema.override: setting gnome background to match cinnamon 
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Tue, 03 Apr 2018 16:09:22 +0300
+
 wasta-cinnamon-xenial (2.0.9) xenial; urgency=medium
 
   * gschema.override: removing thunderbird and vlc from "favorites" so that

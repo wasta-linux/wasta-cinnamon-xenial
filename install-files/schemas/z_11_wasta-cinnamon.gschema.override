@@ -46,6 +46,7 @@
 #   2018-03-05 rik: removing notifications as a default applet
 #   2018-03-10 rik: removing thunderbird and vlc from "favorites" so that
 #       vertical size of cinnamon menu is reduced (good for vms, etc.)
+#   2018-04-04 rik: setting gnome background default to match cinnamon
 #
 # ==============================================================================
 
@@ -164,6 +165,9 @@ triggers = ['<Control>space']
 custom-font = 'Ubuntu 11'
 xkb-icon-rgba = '#FFFFFF'
 use-custom-font = true
+
+[org.gnome.desktop.background]
+picture-uri = 'file:///usr/share/backgrounds/Tramonto_a_Scalea_by_Renatvs88.jpg'
 
 [org.nemo.desktop]
 computer-icon-visible = false
